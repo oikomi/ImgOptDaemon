@@ -42,6 +42,7 @@ public class TaskRun {
 
             try {
                 redis = new Redis(config.getRedisAddr(), config.getRedisPort());
+                System.out.println(config.getRedisAddr());
 
                 List<String> tasks = redis.popTask();
                 String task = tasks.get(1);
