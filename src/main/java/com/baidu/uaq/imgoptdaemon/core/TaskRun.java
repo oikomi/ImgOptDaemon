@@ -30,8 +30,14 @@ public class TaskRun {
         Redis redis = null;
         redis = new Redis(config.getRedisAddr(), config.getRedisPort());
         System.out.println(config.getRedisAddr());
+        System.out.println(redis);
 
         while(true) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             Map<String, String> orgStoreImgMap = new ConcurrentHashMap<String, String>();
             Map<String, String> optStoreImgMap = new ConcurrentHashMap<String, String>();
 
