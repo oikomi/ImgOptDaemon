@@ -29,8 +29,8 @@
       <file leaf-file-name="TaskRun.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/core/TaskRun.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7266187">
-              <caret line="44" column="56" selection-start-line="44" selection-start-column="56" selection-end-line="44" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.04556355">
+              <caret line="30" column="13" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -699,12 +699,12 @@
       <workItem from="1448506075485" duration="729000" />
       <workItem from="1448506833880" duration="487000" />
       <workItem from="1448507377774" duration="52000" />
-      <workItem from="1448507453066" duration="1401000" />
+      <workItem from="1448507453066" duration="1949000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23907000" />
+    <option name="totallyTimeSpent" value="24455000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1241" height="777" extended-state="6" />
@@ -1154,8 +1154,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/core/TaskRun.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7266187">
-          <caret line="44" column="56" selection-start-line="44" selection-start-column="56" selection-end-line="44" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.04556355">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="13" />
           <folding />
         </state>
       </provider>

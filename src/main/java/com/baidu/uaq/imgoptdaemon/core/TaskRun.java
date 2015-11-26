@@ -27,6 +27,10 @@ public class TaskRun {
     private static Config config = Config.getInstance();
 
     public static void main(String[] args) {
+        Redis redis = null;
+        redis = new Redis(config.getRedisAddr(), config.getRedisPort());
+        System.out.println(config.getRedisAddr());
+
         while(true) {
             Map<String, String> orgStoreImgMap = new ConcurrentHashMap<String, String>();
             Map<String, String> optStoreImgMap = new ConcurrentHashMap<String, String>();
@@ -38,12 +42,8 @@ public class TaskRun {
             int optimizedNum = 0;
             OptImg optImg = null;
             ReqTask reqTask = null;
-            Redis redis = null;
 
             try {
-                redis = new Redis(config.getRedisAddr(), config.getRedisPort());
-                System.out.println(config.getRedisAddr());
-
                 List<String> tasks = redis.popTask();
                 String task = tasks.get(1);
 
