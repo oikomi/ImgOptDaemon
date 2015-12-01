@@ -145,6 +145,7 @@ public class TaskRun {
             storeBean.setOptimizedNum(optimizedNum);
 
             System.out.println(reqTask.getRequestid());
+            System.out.println(JSON.toJSONString(storeBean));
 
             redis.addKV(reqTask.getRequestid() + Const.OPT_RESULT_KEY_SUFFIX, JSON.toJSONString(storeBean));
         }
