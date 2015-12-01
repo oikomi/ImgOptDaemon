@@ -33,9 +33,15 @@ public class Redis {
         jedis.lpush(config.getTaskList(), task);
     }
 
-    public List<String> popTask() {
+    public List<String> bPopTask() {
         System.out.println(config.getTaskList());
         return jedis.brpop(0, config.getTaskList());
+        //return jedis.rpop(config.getTaskList());
+    }
+
+    public String popTask() {
+        System.out.println(config.getTaskList());
+        return jedis.rpop(config.getTaskList());
     }
 
 }
