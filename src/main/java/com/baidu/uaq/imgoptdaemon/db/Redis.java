@@ -34,6 +34,7 @@ public class Redis {
     }
 
     public List<String> popTask() {
+        System.out.println(config.getTaskList());
         return jedis.brpop(0, config.getTaskList());
     }
 

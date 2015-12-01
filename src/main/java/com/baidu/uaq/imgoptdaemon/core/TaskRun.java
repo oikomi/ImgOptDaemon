@@ -31,11 +31,12 @@ public class TaskRun {
         Redis redis = null;
         redis = new Redis(config.getRedisAddr(), config.getRedisPort());
         System.out.println(config.getRedisAddr());
+        System.out.println(config.getRedisPort());
         System.out.println(redis);
 
         while(true) {
             try {
-                Thread.sleep(1000);
+                Thread.sleep(2000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -51,7 +52,9 @@ public class TaskRun {
             ReqTask reqTask = null;
 
             try {
+                System.out.println("pop task");
                 List<String> tasks = redis.popTask();
+                System.out.println("pop task end");
                 String task = tasks.get(1);
 
                 if (task != null) {
