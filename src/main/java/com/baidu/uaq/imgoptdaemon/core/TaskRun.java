@@ -16,6 +16,7 @@ import com.baidu.uaq.imgoptdaemon.util.Shell;
 import com.baidu.uaq.imgoptdaemon.util.Util;
 import com.google.gson.Gson;
 
+import javax.jws.soap.SOAPBinding;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -142,6 +143,8 @@ public class TaskRun {
             storeBean.setAfterOptSize(totalOptSize);
             storeBean.setSavedSize(totalOrgSize - totalOptSize);
             storeBean.setOptimizedNum(optimizedNum);
+
+            System.out.println(reqTask.getRequestid());
 
             redis.addKV(reqTask.getRequestid() + Const.OPT_RESULT_KEY_SUFFIX, JSON.toJSONString(storeBean));
         }
