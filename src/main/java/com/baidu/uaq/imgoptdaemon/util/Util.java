@@ -16,10 +16,15 @@ public class Util {
 
     public static String getShellCmdByPicType(String url, String orgImgStorePath) {
         String cmd = null;
+        String ext = null;
         String[] urlList = url.split("\\?");
         String[] pathList = urlList[0].split("/");
         String baseName = pathList[(pathList.length) - 1];
-        String ext = baseName.split("\\.")[1].toLowerCase();
+        String[] tmpExtList = baseName.split("\\.");
+        if (tmpExtList != null && tmpExtList.length >=2) {
+            ext = tmpExtList[1].toLowerCase();
+        }
+        // String ext = baseName.split("\\.")[1].toLowerCase();
 
         if (ext == null) {
             return null;
