@@ -74,6 +74,7 @@ public class TaskRun {
                 System.out.println("optImg is null");
                 continue;
             }
+            System.out.println(optImg.getImgs());
 
             StoreBean storeBean = new StoreBean();
 
