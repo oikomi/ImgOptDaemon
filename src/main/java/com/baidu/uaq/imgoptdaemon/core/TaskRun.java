@@ -78,6 +78,7 @@ public class TaskRun {
             StoreBean storeBean = new StoreBean();
 
             for (String img : optImg.getImgs()) {
+                System.out.println("download img : " + img);
                 String baseName = Util.getPicBaseName(img);
                 String storeName = MD5.CalcMD5(img) + baseName;
                 DownloadImg downloadImg = new DownloadImg(img);
@@ -91,6 +92,7 @@ public class TaskRun {
 
             for (Map.Entry<String, String> entry : orgStoreImgMap.entrySet()) {
                 String img = entry.getKey();
+                System.out.println("run cmd img : " + img);
                 String baseName = Util.getPicBaseName(img);
                 String orgImgStorePath = entry.getValue();
                 String cmd = Util.getShellCmdByPicType(img, orgImgStorePath);
