@@ -52,11 +52,11 @@ public class TaskRun {
             ReqTask reqTask = null;
 
             try {
-                System.out.println("pop task");
+                // System.out.println("pop task");
                 //List<String> tasks = redis.popTask();
                 String task = redis.popTask();
 
-                System.out.println("pop task end");
+                // System.out.println("pop task end");
                 //String task = tasks.get(1);
 
                 if (task != null) {
@@ -97,6 +97,7 @@ public class TaskRun {
                     continue;
                 }
                 try {
+                    System.out.println(cmd);
                     Shell.runCmd(cmd);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -155,6 +156,9 @@ public class TaskRun {
             System.out.println(JSON.toJSONString(storeBean));
 
             redis.addKV(reqTask.getRequestid() + Const.OPT_RESULT_KEY_SUFFIX, JSON.toJSONString(storeBean));
+
+            System.out.println(reqTask.getRequestid());
+            System.out.println("end");
         }
     }
 }

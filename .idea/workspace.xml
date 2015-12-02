@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fdd81a6a-4dc3-4c19-a0ab-526d70cbcfb7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ImgOptDaemon-1.0.jar" afterPath="$PROJECT_DIR$/target/ImgOptDaemon-1.0.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/baidu/uaq/imgoptdaemon/db/Redis.class" afterPath="$PROJECT_DIR$/target/classes/com/baidu/uaq/imgoptdaemon/db/Redis.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/baidu/uaq/imgoptdaemon/core/TaskRun.class" afterPath="$PROJECT_DIR$/target/classes/com/baidu/uaq/imgoptdaemon/core/TaskRun.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/original-ImgOptDaemon-1.0.jar" afterPath="$PROJECT_DIR$/target/original-ImgOptDaemon-1.0.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/db/Redis.java" afterPath="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/db/Redis.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/core/TaskRun.java" afterPath="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/core/TaskRun.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -36,8 +34,8 @@
       <file leaf-file-name="TaskRun.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/core/TaskRun.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.64748204">
-              <caret line="69" column="25" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
+            <state vertical-scroll-proportion="-1.3021582">
+              <caret line="99" column="42" selection-start-line="99" selection-start-column="42" selection-end-line="99" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -80,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/config/Const.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="55" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="55" />
+              <caret line="15" column="63" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -794,12 +792,12 @@
       <workItem from="1448954011190" duration="441000" />
       <workItem from="1448954583199" duration="616000" />
       <workItem from="1448955525658" duration="344000" />
-      <workItem from="1448962655995" duration="927000" />
+      <workItem from="1448962655995" duration="1765000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29224000" />
+    <option name="totallyTimeSpent" value="30062000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1242" height="777" extended-state="6" />
@@ -1198,14 +1196,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/config/Const.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="55" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/config/Config.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1233,10 +1223,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/config/Const.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="63" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/core/TaskRun.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64748204">
-          <caret line="69" column="25" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
+        <state vertical-scroll-proportion="-1.3021582">
+          <caret line="99" column="42" selection-start-line="99" selection-start-column="42" selection-end-line="99" selection-end-column="42" />
           <folding />
         </state>
       </provider>
