@@ -63,7 +63,7 @@ public class TaskRun {
                     Gson gson = new Gson();
                     reqTask = gson.fromJson(task, ReqTask.class);
                     optImg = gson.fromJson(reqTask.getImagelist(), OptImg.class);
-                    continue;
+                    // continue;
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -71,6 +71,7 @@ public class TaskRun {
             }
 
             if (optImg == null) {
+                System.out.println("optImg is null");
                 continue;
             }
 

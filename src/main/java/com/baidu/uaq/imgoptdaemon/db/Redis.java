@@ -40,7 +40,7 @@ public class Redis {
     }
 
     public String popTask() {
-        System.out.println(config.getTaskList());
+        // System.out.println(config.getTaskList());
         return jedis.rpop(config.getTaskList());
     }
 
