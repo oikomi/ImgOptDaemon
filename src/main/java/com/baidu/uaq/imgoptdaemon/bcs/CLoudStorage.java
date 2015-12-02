@@ -42,11 +42,12 @@ public class CLoudStorage {
 
     private static String putObjectByFile(BosClient client, String bucketName, String basename, File file) {
         Random random = new Random();
-        int randomNum = random.nextInt(99999) % (99999 - 10000 + 1) + 10000;
+        // int randomNum = random.nextInt(99999) % (99999 - 10000 + 1) + 10000;
         Date dNow = new Date();
         DateFormat dataFormat = new SimpleDateFormat("yyyyMMdd");
         String formatData = dataFormat.format(dNow);
-        String objectKey = formatData + "/" + randomNum + basename;
+        // String objectKey = formatData + "/" + randomNum + basename;
+        String objectKey = formatData + "/" + basename;
 
         PutObjectResponse putObjectFromFileResponse = client.putObject(bucketName, objectKey, file);
 
