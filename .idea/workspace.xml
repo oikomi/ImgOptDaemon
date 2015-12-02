@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fdd81a6a-4dc3-4c19-a0ab-526d70cbcfb7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/baidu/uaq/imgoptdaemon/bcs/CLoudStorage.class" afterPath="$PROJECT_DIR$/target/classes/com/baidu/uaq/imgoptdaemon/bcs/CLoudStorage.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ImgOptDaemon-1.0.jar" afterPath="$PROJECT_DIR$/target/ImgOptDaemon-1.0.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/baidu/uaq/imgoptdaemon/db/StoreBean.class" afterPath="$PROJECT_DIR$/target/classes/com/baidu/uaq/imgoptdaemon/db/StoreBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/baidu/uaq/imgoptdaemon/core/TaskRun.class" afterPath="$PROJECT_DIR$/target/classes/com/baidu/uaq/imgoptdaemon/core/TaskRun.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/original-ImgOptDaemon-1.0.jar" afterPath="$PROJECT_DIR$/target/original-ImgOptDaemon-1.0.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/bcs/CLoudStorage.java" afterPath="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/bcs/CLoudStorage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/db/StoreBean.java" afterPath="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/db/StoreBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/core/TaskRun.java" afterPath="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/core/TaskRun.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -34,20 +32,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TaskRun.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TaskRun.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/core/TaskRun.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="138" column="38" selection-start-line="138" selection-start-column="38" selection-end-line="138" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.51318944">
+              <caret line="134" column="19" selection-start-line="134" selection-start-column="19" selection-end-line="134" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CLoudStorage.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CLoudStorage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/bcs/CLoudStorage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6115108">
+            <state vertical-scroll-proportion="0.0">
               <caret line="49" column="43" selection-start-line="49" selection-start-column="43" selection-end-line="49" selection-end-column="43" />
               <folding />
             </state>
@@ -164,9 +162,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/db/Redis.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/util/Util.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/util/FileUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/core/TaskRun.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/db/StoreBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/bcs/CLoudStorage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/core/TaskRun.java" />
       </list>
     </option>
   </component>
@@ -890,12 +888,12 @@
       <workItem from="1448954011190" duration="441000" />
       <workItem from="1448954583199" duration="616000" />
       <workItem from="1448955525658" duration="344000" />
-      <workItem from="1448962655995" duration="7645000" />
+      <workItem from="1448962655995" duration="8430000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35942000" />
+    <option name="totallyTimeSpent" value="36727000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1242" height="777" extended-state="6" />
@@ -1330,18 +1328,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/core/TaskRun.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/bcs/CLoudStorage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="138" column="38" selection-start-line="138" selection-start-column="38" selection-end-line="138" selection-end-column="38" />
+          <caret line="49" column="43" selection-start-line="49" selection-start-column="43" selection-end-line="49" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/bcs/CLoudStorage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/core/TaskRun.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6115108">
-          <caret line="49" column="43" selection-start-line="49" selection-start-column="43" selection-end-line="49" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.51318944">
+          <caret line="134" column="19" selection-start-line="134" selection-start-column="19" selection-end-line="134" selection-end-column="19" />
           <folding />
         </state>
       </provider>

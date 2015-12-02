@@ -118,7 +118,7 @@ public class TaskRun {
                 PicAttr tmpPicAttr = FileUtil.getPicAttr(Const.DOWNLOAD_IMG_BASE_PATH +
                         MD5.CalcMD5(img) + baseName);
                 long orgPicSize = tmpPicAttr.getSize();
-                totalOrgSize += orgPicSize / 1024.00;
+                // totalOrgSize += orgPicSize / 1024.00;
 
                 optimizedImage.setWidth(tmpPicAttr.getWidth());
                 optimizedImage.setHeight(tmpPicAttr.getHeight());
@@ -132,6 +132,14 @@ public class TaskRun {
                 }
 
                 long optPicSize = tmpPicAttr.getSize();
+                // totalOptSize += optPicSize / 1024.00;
+
+                //
+                if (optPicSize >= orgPicSize) {
+                    continue;
+                }
+
+                totalOrgSize += orgPicSize / 1024.00;
                 totalOptSize += optPicSize / 1024.00;
 
                 optimizedImage.setMiniSize(tmpPicAttr.getSize());
