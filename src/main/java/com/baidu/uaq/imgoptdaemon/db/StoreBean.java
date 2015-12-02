@@ -6,29 +6,29 @@ import java.util.ArrayList;
  * Created by miaohong01 on 15/11/18.
  */
 public class StoreBean {
-    private double afterOptSize;
-    private double beforeOptSize;
+    private String afterOptSize;
+    private String beforeOptSize;
     private ArrayList<OptimizedImage> optimizedImages;
     private int optimizedNum;
-    private double savedSize;
+    private String savedSize;
 
     public StoreBean () {
         this.optimizedImages = new ArrayList<OptimizedImage>();
     }
 
-    public double getAfterOptSize() {
+    public String getAfterOptSize() {
         return afterOptSize;
     }
 
-    public void setAfterOptSize(double afterOptSize) {
+    public void setAfterOptSize(String afterOptSize) {
         this.afterOptSize = afterOptSize;
     }
 
-    public double getBeforeOptSize() {
+    public String getBeforeOptSize() {
         return beforeOptSize;
     }
 
-    public void setBeforeOptSize(double beforeOptSize) {
+    public void setBeforeOptSize(String beforeOptSize) {
         this.beforeOptSize = beforeOptSize;
     }
 
@@ -48,11 +48,11 @@ public class StoreBean {
         this.optimizedNum = optimizedNum;
     }
 
-    public double getSavedSize() {
+    public String getSavedSize() {
         return savedSize;
     }
 
-    public void setSavedSize(double savedSize) {
+    public void setSavedSize(String savedSize) {
         this.savedSize = savedSize;
     }
 

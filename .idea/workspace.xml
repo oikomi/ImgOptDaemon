@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fdd81a6a-4dc3-4c19-a0ab-526d70cbcfb7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/baidu/uaq/imgoptdaemon/util/FileUtil.class" afterPath="$PROJECT_DIR$/target/classes/com/baidu/uaq/imgoptdaemon/util/FileUtil.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ImgOptDaemon-1.0.jar" afterPath="$PROJECT_DIR$/target/ImgOptDaemon-1.0.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/baidu/uaq/imgoptdaemon/util/Util.class" afterPath="$PROJECT_DIR$/target/classes/com/baidu/uaq/imgoptdaemon/util/Util.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/baidu/uaq/imgoptdaemon/core/TaskRun.class" afterPath="$PROJECT_DIR$/target/classes/com/baidu/uaq/imgoptdaemon/core/TaskRun.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/original-ImgOptDaemon-1.0.jar" afterPath="$PROJECT_DIR$/target/original-ImgOptDaemon-1.0.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/util/FileUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/util/FileUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/db/StoreBean.java" afterPath="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/db/StoreBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/core/TaskRun.java" afterPath="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/core/TaskRun.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/util/Util.java" afterPath="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/util/Util.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -37,8 +38,21 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/core/TaskRun.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="124" column="44" selection-start-line="124" selection-start-column="44" selection-end-line="124" selection-end-column="44" />
+              <caret line="161" column="30" selection-start-line="161" selection-start-column="30" selection-end-line="161" selection-end-column="30" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StoreBean.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/db/StoreBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.35971224">
+              <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+              <folding>
+                <element signature="e#1303#1304#0" expanded="true" />
+                <element signature="e#1345#1346#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -76,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileUtil.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FileUtil.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/util/FileUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54916066">
-              <caret line="65" column="12" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -133,14 +147,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/util/MD5.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/util/PicType.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/http/DownloadImg.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/db/StoreBean.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/config/Const.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/config/Config.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config/imgopt.conf.json" />
         <option value="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/db/Redis.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/util/Util.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/core/TaskRun.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/util/FileUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/core/TaskRun.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/db/StoreBean.java" />
       </list>
     </option>
   </component>
@@ -834,12 +848,12 @@
       <workItem from="1448954011190" duration="441000" />
       <workItem from="1448954583199" duration="616000" />
       <workItem from="1448955525658" duration="344000" />
-      <workItem from="1448962655995" duration="5267000" />
+      <workItem from="1448962655995" duration="6310000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33564000" />
+    <option name="totallyTimeSpent" value="34607000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1242" height="777" extended-state="6" />
@@ -1179,13 +1193,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/db/StoreBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="139" column="9" selection-start-line="139" selection-start-column="9" selection-end-line="139" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/util/MD5.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.569044">
@@ -1267,19 +1274,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/core/TaskRun.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/util/FileUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="124" column="44" selection-start-line="124" selection-start-column="44" selection-end-line="124" selection-end-column="44" />
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/util/FileUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/core/TaskRun.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54916066">
-          <caret line="65" column="12" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="161" column="30" selection-start-line="161" selection-start-column="30" selection-end-line="161" selection-end-column="30" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/uaq/imgoptdaemon/db/StoreBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35971224">
+          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+          <folding>
+            <element signature="e#1303#1304#0" expanded="true" />
+            <element signature="e#1345#1346#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

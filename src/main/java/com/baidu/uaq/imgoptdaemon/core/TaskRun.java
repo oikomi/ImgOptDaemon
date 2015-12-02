@@ -17,6 +17,7 @@ import com.baidu.uaq.imgoptdaemon.util.Util;
 import com.google.gson.Gson;
 
 import javax.jws.soap.SOAPBinding;
+import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -33,6 +34,7 @@ public class TaskRun {
         System.out.println(config.getRedisAddr());
         System.out.println(config.getRedisPort());
         System.out.println(redis);
+        DecimalFormat df = new DecimalFormat("#.00");
 
         while(true) {
             try {
@@ -155,9 +157,9 @@ public class TaskRun {
 
                 storeBean.getOptimizedImages().add(optimizedImage);
             }
-            storeBean.setBeforeOptSize(totalOrgSize);
-            storeBean.setAfterOptSize(totalOptSize);
-            storeBean.setSavedSize(totalOrgSize - totalOptSize);
+            storeBean.setBeforeOptSize(df.format(totalOrgSize));
+            storeBean.setAfterOptSize(df.format(totalOptSize));
+            storeBean.setSavedSize(df.format(totalOrgSize - totalOptSize));
             storeBean.setOptimizedNum(optimizedNum);
 
             System.out.println(reqTask.getRequestid());
