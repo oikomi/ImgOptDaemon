@@ -31,12 +31,16 @@ public class Util {
         } else if ("png".equals(ext)) {
             cmd = Const.PNGQUANT_CMD + " -f " + orgImgStorePath + " -o  " +
                     Const.OPT_IMG_BASE_PATH + MD5.CalcMD5(url) + baseName;
-        } else if ("gif".equals(ext)){
-            cmd = Const.GIFSICLE_CMD + " -O2 " + orgImgStorePath + " > " +
-                    Const.OPT_IMG_BASE_PATH + MD5.CalcMD5(url) + baseName;
         } else {
 
         }
+
+//        else if ("gif".equals(ext)){
+//            cmd = Const.GIFSICLE_CMD + " -O2 " + orgImgStorePath + " > " +
+//                    Const.OPT_IMG_BASE_PATH + MD5.CalcMD5(url) + baseName;
+//        } else {
+//
+//        }
 
         return cmd;
     }
