@@ -55,12 +55,15 @@ public class FileUtil {
 
     public static PicAttr getPicAttr(String filename) {
         PicAttr picAttr = new PicAttr();
-        File file = new File(filename);
         BufferedImage bi = null;
         try {
+            File file = new File(filename);
             bi = ImageIO.read(file);
         } catch (IOException e) {
             e.printStackTrace();
+            return null;
+        } finally {
+
         }
         int width = bi.getWidth();
         int height = bi.getHeight();

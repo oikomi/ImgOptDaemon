@@ -125,6 +125,10 @@ public class TaskRun {
                 tmpPicAttr = FileUtil.getPicAttr(Const.OPT_IMG_BASE_PATH +
                         MD5.CalcMD5(img) + baseName);
 
+                if (tmpPicAttr == null) {
+                    continue;
+                }
+
                 long optPicSize = tmpPicAttr.getSize();
                 totalOptSize += optPicSize / 1024.00;
 
