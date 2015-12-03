@@ -21,6 +21,7 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.apache.log4j.xml.DOMConfigurator;
 
+import java.io.File;
 import java.net.URLClassLoader;
 import java.text.DecimalFormat;
 import java.util.List;
@@ -197,8 +198,7 @@ public class TaskRun {
 //            System.out.println("end");
 
             LOG.debug("complete | " + reqTask.getRequestid() + " | success");
-
-
+            FileUtil.deleteDir(new File(Const.DOWNLOAD_IMG_BASE_PATH));
         }
     }
 }
