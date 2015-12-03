@@ -67,25 +67,22 @@ public class TaskRun {
             OptImg optImg = null;
             ReqTask reqTask = null;
 
+            String task = null;
+
             try {
                 // System.out.println("pop task");
                 //List<String> tasks = redis.popTask();
-                String task = redis.popTask();
-
-                // System.out.println("pop task end");
-                //String task = tasks.get(1);
+                task = redis.popTask();
 
                 if (task != null) {
                     Gson gson = new Gson();
                     reqTask = gson.fromJson(task, ReqTask.class);
                     optImg = gson.fromJson(reqTask.getImagelist(), OptImg.class);
-                    // continue;
-
-
                 }
             } catch (Exception e) {
                 e.printStackTrace();
                 LOG.error("get task failed from redis");
+                LOG.error(task);
                 continue;
             }
 
