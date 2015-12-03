@@ -15,8 +15,13 @@ import com.baidu.uaq.imgoptdaemon.util.MD5;
 import com.baidu.uaq.imgoptdaemon.util.Shell;
 import com.baidu.uaq.imgoptdaemon.util.Util;
 import com.google.gson.Gson;
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+import org.apache.log4j.xml.DOMConfigurator;
 
-import javax.jws.soap.SOAPBinding;
+import java.net.URLClassLoader;
 import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Map;
@@ -26,19 +31,27 @@ import java.util.concurrent.ConcurrentHashMap;
  * Created by miaohong01 on 15/11/20.
  */
 public class TaskRun {
+
+    private static final Logger LOG = LogManager.getLogger(TaskRun.class);
     private static Config config = Config.getInstance();
+
+    private static void initLog() {
+        // URLClassLoader.getSystemResourceAsStream("log4j.properties");
+        BasicConfigurator.configure();
+        PropertyConfigurator.configure(URLClassLoader.getSystemResourceAsStream("log4j.properties"));
+        DOMConfigurator.configure("");
+    }
 
     public static void main(String[] args) {
         Redis redis = null;
         redis = new Redis(config.getRedisAddr(), config.getRedisPort());
-        System.out.println(config.getRedisAddr());
-        System.out.println(config.getRedisPort());
-        System.out.println(redis);
+
         DecimalFormat df = new DecimalFormat("#.00");
+        initLog();
 
         while(true) {
             try {
-                Thread.sleep(5000);
+                Thread.sleep(3000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -66,14 +79,17 @@ public class TaskRun {
                     reqTask = gson.fromJson(task, ReqTask.class);
                     optImg = gson.fromJson(reqTask.getImagelist(), OptImg.class);
                     // continue;
+
+
                 }
             } catch (Exception e) {
                 e.printStackTrace();
+                LOG.error("get task failed from redis");
                 continue;
             }
 
             if (optImg == null) {
-                System.out.println("optImg is null");
+                // System.out.println("optImg is null");
                 continue;
             }
             System.out.println(optImg.getImgs());
@@ -81,7 +97,7 @@ public class TaskRun {
             StoreBean storeBean = new StoreBean();
 
             for (String img : optImg.getImgs()) {
-                System.out.println("download img : " + img);
+                // System.out.println("download img : " + img);
                 String baseName = Util.getPicBaseName(img);
                 String storeName = MD5.CalcMD5(img) + baseName;
                 DownloadImg downloadImg = new DownloadImg(img);
@@ -89,13 +105,14 @@ public class TaskRun {
                 if (flag) {
                     orgStoreImgMap.put(img, Const.DOWNLOAD_IMG_BASE_PATH + storeName);
                 } else {
+                    LOG.debug("download | " + img + " | failed");
                     continue;
                 }
             }
 
             for (Map.Entry<String, String> entry : orgStoreImgMap.entrySet()) {
                 String img = entry.getKey();
-                System.out.println("run cmd img : " + img);
+                // System.out.println("run cmd img : " + img);
                 String baseName = Util.getPicBaseName(img);
                 String orgImgStorePath = entry.getValue();
                 String cmd = Util.getShellCmdByPicType(img, orgImgStorePath);
@@ -103,10 +120,11 @@ public class TaskRun {
                     continue;
                 }
                 try {
-                    System.out.println(cmd);
+                    // System.out.println(cmd);
                     Shell.runCmd(cmd);
                 } catch (Exception e) {
                     e.printStackTrace();
+                    LOG.error("run | " + cmd + " | failed");
                     continue;
                 }
 
@@ -170,13 +188,15 @@ public class TaskRun {
             storeBean.setSavedSize(df.format(totalOrgSize - totalOptSize));
             storeBean.setOptimizedNum(optimizedNum);
 
-            System.out.println(reqTask.getRequestid());
-            System.out.println(JSON.toJSONString(storeBean));
+            // System.out.println(reqTask.getRequestid());
+            // System.out.println(JSON.toJSONString(storeBean));
 
             redis.addKV(reqTask.getRequestid() + Const.OPT_RESULT_KEY_SUFFIX, JSON.toJSONString(storeBean));
 
-            System.out.println(reqTask.getRequestid());
-            System.out.println("end");
+//            System.out.println(reqTask.getRequestid());
+//            System.out.println("end");
+
+            LOG.debug("complete | " + reqTask.getRequestid() + " | success");
         }
     }
 }
