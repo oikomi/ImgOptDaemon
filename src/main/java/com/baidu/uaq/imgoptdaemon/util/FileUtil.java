@@ -59,6 +59,10 @@ public class FileUtil {
         File file = null;
         try {
             file = new File(filename);
+            if(!file.exists()) {
+                return null;
+            }
+
             bi = ImageIO.read(file);
         } catch (IOException e) {
             LOG.error("getPicAttr  | " + filename + " | failed");
