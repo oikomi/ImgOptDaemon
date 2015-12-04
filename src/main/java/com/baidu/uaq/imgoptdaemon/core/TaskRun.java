@@ -52,7 +52,7 @@ public class TaskRun {
 
         while(true) {
             try {
-                Thread.sleep(3000);
+                Thread.sleep(5000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -70,9 +70,10 @@ public class TaskRun {
             String task = null;
 
             try {
-                // System.out.println("pop task");
+                System.out.println("pop task");
                 //List<String> tasks = redis.popTask();
                 task = redis.popTask();
+                System.out.println("pop task end");
 
                 if (task != null) {
                     Gson gson = new Gson();
