@@ -65,6 +65,11 @@ public class FileUtil {
             e.printStackTrace();
             return null;
         }
+
+        if (bi == null) {
+            return null;
+        }
+
         int width = bi.getWidth();
         int height = bi.getHeight();
 
