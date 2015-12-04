@@ -56,14 +56,18 @@ public class FileUtil {
     public static PicAttr getPicAttr(String filename) {
         PicAttr picAttr = new PicAttr();
         BufferedImage bi = null;
+        File file = null;
         try {
-            File file = new File(filename);
+            file = new File(filename);
             bi = ImageIO.read(file);
         } catch (IOException e) {
+            LOG.error("getPicAttr  | " + filename + " | failed");
             e.printStackTrace();
             return null;
         } finally {
-
+//            if (file != null) {
+//
+//            }
         }
         int width = bi.getWidth();
         int height = bi.getHeight();
@@ -78,7 +82,7 @@ public class FileUtil {
     public static boolean deleteDir(File dir) {
         if (dir.isDirectory()) {
             String[] children = dir.list();
-            for (int i=0; i<children.length; i++) {
+            for (int i = 0; i < children.length; i++) {
                 boolean success = deleteDir(new File(dir, children[i]));
                 if (!success) {
                     return false;
