@@ -133,6 +133,11 @@ public class TaskRun {
 
                 PicAttr tmpPicAttr = FileUtil.getPicAttr(Const.DOWNLOAD_IMG_BASE_PATH +
                         MD5.CalcMD5(img) + baseName);
+
+                if (tmpPicAttr == null) {
+                    continue;
+                }
+
                 long orgPicSize = tmpPicAttr.getSize();
                 // totalOrgSize += orgPicSize / 1024.00;
 

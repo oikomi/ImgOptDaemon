@@ -64,10 +64,6 @@ public class FileUtil {
             LOG.error("getPicAttr  | " + filename + " | failed");
             e.printStackTrace();
             return null;
-        } finally {
-//            if (file != null) {
-//
-//            }
         }
         int width = bi.getWidth();
         int height = bi.getHeight();
