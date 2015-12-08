@@ -12,29 +12,30 @@ import java.io.InputStreamReader;
 public class Shell {
     private static final Logger LOG = LogManager.getLogger(Shell.class);
 
-    public static String runCmd(String cmd) {
+    public static void runCmd(String cmd) {
         if (cmd == null) {
-            return null;
+            return;
         }
         try {
             Process ps = Runtime.getRuntime().exec(cmd);
-            ps.waitFor();
+            //ps.waitFor();
+            Thread.sleep(2000);
 
-            BufferedReader br = new BufferedReader(new InputStreamReader(ps.getInputStream()));
-            StringBuffer sb = new StringBuffer();
-            String line;
-            while ((line = br.readLine()) != null) {
-                // sb.append(line).append("\n");
-            }
-            String result = sb.toString();
-            // System.out.println(result);
-
-            return result;
+//            BufferedReader br = new BufferedReader(new InputStreamReader(ps.getInputStream()));
+//            StringBuffer sb = new StringBuffer();
+//            String line;
+//            while ((line = br.readLine()) != null) {
+//                // sb.append(line).append("\n");
+//            }
+//            String result = sb.toString();
+//            // System.out.println(result);
+//
+//            return result;
         }
         catch (Exception e) {
             LOG.error("run cmd failed | " + cmd);
             e.printStackTrace();
         }
-        return null;
+        return;
     }
 }
