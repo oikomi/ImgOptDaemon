@@ -36,19 +36,19 @@ public class TaskRun {
     private static final Logger LOG = LogManager.getLogger(TaskRun.class);
     private static Config config = Config.getInstance();
 
-//    private static void initLog() {
-//        // URLClassLoader.getSystemResourceAsStream("log4j.properties");
-//        BasicConfigurator.configure();
-//        PropertyConfigurator.configure(URLClassLoader.getSystemResourceAsStream("log4j.properties"));
-//        DOMConfigurator.configure("");
-//    }
+    private static void initLog() {
+        // URLClassLoader.getSystemResourceAsStream("log4j.properties");
+        BasicConfigurator.configure();
+        PropertyConfigurator.configure(URLClassLoader.getSystemResourceAsStream("log4j.properties"));
+        DOMConfigurator.configure("");
+    }
 
     public static void main(String[] args) {
         Redis redis = null;
         redis = new Redis(config.getRedisAddr(), config.getRedisPort());
 
         DecimalFormat df = new DecimalFormat("#.00");
-        // initLog();
+        initLog();
 
         while(true) {
             try {

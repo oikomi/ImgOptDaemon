@@ -12,10 +12,10 @@ import java.net.URLClassLoader;
  * Created by baidu on 15/12/3.
  */
 public class Log {
-    static {
-        BasicConfigurator.configure();
-        PropertyConfigurator.configure(URLClassLoader.getSystemResourceAsStream("log4j.properties"));
-        DOMConfigurator.configure("");
-    }
+//    static {
+//        BasicConfigurator.configure();
+//        PropertyConfigurator.configure(URLClassLoader.getSystemResourceAsStream("log4j.properties"));
+//        DOMConfigurator.configure("");
+//    }
 
 }
