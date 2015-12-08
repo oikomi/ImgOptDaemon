@@ -19,7 +19,7 @@ public class Shell {
         try {
             Process ps = Runtime.getRuntime().exec(cmd);
             //ps.waitFor();
-            Thread.sleep(2000);
+            //Thread.sleep(2000);
 
 //            BufferedReader br = new BufferedReader(new InputStreamReader(ps.getInputStream()));
 //            StringBuffer sb = new StringBuffer();
