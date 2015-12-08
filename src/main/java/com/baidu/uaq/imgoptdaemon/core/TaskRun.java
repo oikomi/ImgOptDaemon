@@ -121,6 +121,7 @@ public class TaskRun {
                 try {
                     // System.out.println(cmd);
                     Shell.runCmd(cmd);
+                    Thread.sleep(1000);
                 } catch (Exception e) {
                     e.printStackTrace();
                     LOG.error("run | " + cmd + " | failed");
