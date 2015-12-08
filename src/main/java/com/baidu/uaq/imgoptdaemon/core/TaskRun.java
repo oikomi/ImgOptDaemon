@@ -200,7 +200,7 @@ public class TaskRun {
 //            System.out.println(reqTask.getRequestid());
 //            System.out.println("end");
 
-            LOG.debug("complete | " + reqTask.getRequestid() + " | success");
+            LOG.error("complete | " + reqTask.getRequestid() + " | success");
             FileUtil.deleteDir(new File(Const.DOWNLOAD_IMG_BASE_PATH));
         }
     }
