@@ -96,7 +96,6 @@ public class Config {
 
     static {
         Gson gson = new Gson();
-        // FileInputStream configIn = null;
         InputStream configIn = null;
         try {
             // configIn = URLClassLoader.getSystemResourceAsStream(configFilePath);
@@ -107,7 +106,6 @@ public class Config {
             configIn = new FileInputStream(classLoader.getResource(configFilePath).getFile());
             _instance = gson.fromJson(IOUtils.toString(configIn), Config.class);
 
-            //_instance = gson.fromJson(IOUtils.toString(configIn), Config.class);
         } catch (JsonSyntaxException e) {
             e.printStackTrace();
         } catch (IOException e) {

@@ -32,6 +32,7 @@ public class CLoudStorage {
             url = putObjectByFile(client, config.getBucket(), basename, new File(filePath));
 
         } catch (Exception e) {
+            e.printStackTrace();
 
         } finally {
             FileUtil.deleteFile(filePath);

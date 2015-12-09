@@ -33,11 +33,11 @@ public class TaskRunV2 implements Runnable {
 
         DecimalFormat df = new DecimalFormat("#.00");
 
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            Thread.sleep(1000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         Map<String, String> orgStoreImgMap = new ConcurrentHashMap<String, String>();
         Map<String, String> optStoreImgMap = new ConcurrentHashMap<String, String>();
 
@@ -52,10 +52,10 @@ public class TaskRunV2 implements Runnable {
         String task = null;
 
         try {
-            System.out.println("pop task");
+            // System.out.println("pop task");
             //List<String> tasks = redis.popTask();
             task = redis.popTask();
-            System.out.println("pop task end");
+            // System.out.println("pop task end");
 
             if (task != null) {
                 Gson gson = new Gson();
@@ -64,16 +64,14 @@ public class TaskRunV2 implements Runnable {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            //continue;
             return;
         }
 
         if (optImg == null) {
             // System.out.println("optImg is null");
-            //continue;
             return;
         }
-        System.out.println(optImg.getImgs());
+        // System.out.println(optImg.getImgs());
 
         StoreBean storeBean = new StoreBean();
 
@@ -135,9 +133,7 @@ public class TaskRunV2 implements Runnable {
             }
 
             long optPicSize = tmpPicAttr.getSize();
-            // totalOptSize += optPicSize / 1024.00;
 
-            //
             if (optPicSize >= orgPicSize) {
                 continue;
             }
@@ -178,9 +174,8 @@ public class TaskRunV2 implements Runnable {
 
         redis.addKV(reqTask.getRequestid() + Const.OPT_RESULT_KEY_SUFFIX, JSON.toJSONString(storeBean));
 
-        FileUtil.deleteDir(new File(Const.DOWNLOAD_IMG_BASE_PATH));
+        // FileUtil.deleteDir(new File(Const.DOWNLOAD_IMG_BASE_PATH));
     }
-
 
     public void run() {
         doImgOpt();
