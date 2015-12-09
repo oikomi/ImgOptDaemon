@@ -36,7 +36,7 @@ public class ImgOptDaemonAction {
         RespCmd respCmd = new RespCmd();
         respCmd.setCode(0);
         respCmd.setInfo("success");
-        new Thread(new TaskRunV2());
+        new Thread(new TaskRunV2()).start();
 
         return respCmd;
     }
