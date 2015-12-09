@@ -1,0 +1,24 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.baidu.uaq.imgoptdaemon.server.mapper.ImgOptDaemonMapper">
+    <!--<resultMap type="com.baidu.uaq.imgopt.server.po.Stat" id="statmap">-->
+        <!--<result column="id" property="id"/>-->
+        <!--<result column="request_id" property="request_id"/>-->
+        <!--<result column="duration" property="duration"/>-->
+        <!--<result column="user_cpu" property="user_cpu"/>-->
+        <!--<result column="sys_cpu" property="sys_cpu"/>-->
+        <!--<result column="mem_peak_usage" property="mem_peak_usage"/>-->
+    <!--</resultMap>-->
+
+    <!--<select id="getStat" parameterType="int" resultMap="statmap">-->
+        <!--select * from stats WHERE id=#{id}-->
+    <!--</select>-->
+
+    <!--<select id="getStat" parameterType="int" resultType="map">-->
+    <!--select * from stats WHERE id=#{value}-->
+    <!--</select>-->
+
+
+</mapper>

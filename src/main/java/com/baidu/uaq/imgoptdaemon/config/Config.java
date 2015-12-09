@@ -99,11 +99,15 @@ public class Config {
         // FileInputStream configIn = null;
         InputStream configIn = null;
         try {
-            configIn = URLClassLoader.getSystemResourceAsStream(configFilePath);
+            // configIn = URLClassLoader.getSystemResourceAsStream(configFilePath);
             // configIn = new FileInputStream(classLoader.getResource(configFilePath).getFile());
             // System.out.println(configIn);
             // configIn = new FileInputStream(configFilePath);
+
+            configIn = new FileInputStream(classLoader.getResource(configFilePath).getFile());
             _instance = gson.fromJson(IOUtils.toString(configIn), Config.class);
+
+            //_instance = gson.fromJson(IOUtils.toString(configIn), Config.class);
         } catch (JsonSyntaxException e) {
             e.printStackTrace();
         } catch (IOException e) {
