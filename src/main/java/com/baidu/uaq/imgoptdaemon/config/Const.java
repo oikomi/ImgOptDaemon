@@ -14,4 +14,11 @@ public class Const {
     public static final String OPT_IMG_BASE_PATH = "/tmp/opt_img/";
 
     public static final String OPT_RESULT_KEY_SUFFIX = "_imgopt";
+
+
+    public static final int SUCCESS_CODE = 0;
+    public static final int FAILED_CODE = -1;
+
+    public static final String SUCCESS_INFO = "success";
+    public static final String FAILED__INFO = "error";
 }

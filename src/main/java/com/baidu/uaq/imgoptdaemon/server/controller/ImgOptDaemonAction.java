@@ -34,8 +34,8 @@ public class ImgOptDaemonAction {
     @RequestMapping(value = "/doimgopt", method = RequestMethod.GET)
     public @ResponseBody RespCmd doimgopt() {
         RespCmd respCmd = new RespCmd();
-        respCmd.setCode(0);
-        respCmd.setInfo("success");
+        respCmd.setCode(Const.SUCCESS_CODE);
+        respCmd.setInfo(Const.SUCCESS_INFO);
         new Thread(new TaskRunV2()).start();
 
         return respCmd;
@@ -45,8 +45,8 @@ public class ImgOptDaemonAction {
     public @ResponseBody RespCmd imgoptMonitor() {
         RespCmd respCmd = new RespCmd();
 
-        respCmd.setCode(0);
-        respCmd.setInfo("success");
+        respCmd.setCode(Const.SUCCESS_CODE);
+        respCmd.setInfo(Const.SUCCESS_INFO);
 
         return respCmd;
     }
@@ -55,36 +55,19 @@ public class ImgOptDaemonAction {
     public @ResponseBody RespCmd imgopt(@RequestBody String reqBody) {
         RespCmd respCmd = new RespCmd();
         if (reqBody == null) {
-            respCmd.setCode(-1);
-            respCmd.setInfo("error");
+            respCmd.setCode(Const.FAILED_CODE);
+            respCmd.setInfo(Const.FAILED__INFO);
 
             return respCmd;
         }
 
         Redis redis = new Redis(config.getRedisAddr(), config.getRedisPort());
-        System.out.println("store in redis");
+        // System.out.println("store in redis");
         redis.pushTask(reqBody);
-        System.out.println("store in redis  end");
+        // System.out.println("store in redis  end");
 
-//        CloseableHttpClient httpclient = HttpClients.createDefault();
-//        CloseableHttpResponse response = null;
-//        try {
-//            HttpGet httpget = new HttpGet("http://127.0.0.1:8020/uaq/v1/doimgopt");
-//            response = httpclient.execute(httpget);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        } finally {
-//            if (response != null) {
-//                try {
-//                    response.close();
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        }
-
-        respCmd.setCode(0);
-        respCmd.setInfo("success");
+        respCmd.setCode(Const.SUCCESS_CODE);
+        respCmd.setInfo(Const.SUCCESS_INFO);
 
         return respCmd;
     }
