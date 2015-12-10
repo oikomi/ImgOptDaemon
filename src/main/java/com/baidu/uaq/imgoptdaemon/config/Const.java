@@ -15,6 +15,8 @@ public class Const {
 
     public static final String OPT_RESULT_KEY_SUFFIX = "_imgopt";
 
+    public static final String EXT_OPT_RESULT_KEY_SUFFIX = "_extimgopt";
+
 
     public static final int SUCCESS_CODE = 0;
     public static final int FAILED_CODE = -1;

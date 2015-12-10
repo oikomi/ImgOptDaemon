@@ -1,9 +1,0 @@
-{
-  redisAddr : "10.46.222.55",
-  redisPort : 9001,
-  accessKey : "6fc5405248d74a81839e232f2ddd3ca1",
-  secretKey : "0275c550b5cf462cb6630454be47d224",
-  endPoint : "http://bj.bcebos.com",
-  bucket : "testimgopt",
-  taskList : "img_opt_task"
-}
