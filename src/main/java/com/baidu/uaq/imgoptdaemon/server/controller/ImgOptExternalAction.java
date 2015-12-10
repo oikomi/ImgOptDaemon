@@ -12,8 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
- * Created by baidu on 15/12/10.
+ * Created by miaohong01 on 15/12/10.
  */
 
 @Controller
@@ -29,19 +31,15 @@ public class ImgOptExternalAction {
         respCmd.setCode(Const.SUCCESS_CODE);
         respCmd.setInfo(Const.SUCCESS_INFO);
 
-
+        // FIXME
         new Thread(new ExternalTaskRunUrl(externalReqImgOptUrl)).start();
 
         return respCmd;
-
     }
-
 
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
-    public void doImgoptByUpload() {
+    public void doImgoptByUpload(HttpServletRequest request) {
 
 
     }
-
-
 }

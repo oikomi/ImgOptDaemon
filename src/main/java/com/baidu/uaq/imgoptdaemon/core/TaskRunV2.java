@@ -33,11 +33,6 @@ public class TaskRunV2 implements Runnable {
 
         DecimalFormat df = new DecimalFormat("#.00");
 
-//        try {
-//            Thread.sleep(1000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
         Map<String, String> orgStoreImgMap = new ConcurrentHashMap<String, String>();
         Map<String, String> optStoreImgMap = new ConcurrentHashMap<String, String>();
 
@@ -98,7 +93,6 @@ public class TaskRunV2 implements Runnable {
                 continue;
             }
             try {
-                // System.out.println(cmd);
                 Shell.runCmd(cmd);
                 Thread.sleep(1000);
             } catch (Exception e) {

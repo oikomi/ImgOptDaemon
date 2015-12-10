@@ -46,7 +46,6 @@ public class ExternalTaskRunUrl implements Runnable {
         boolean flag = downloadImg.httpDownloadFile(Const.DOWNLOAD_IMG_BASE_PATH + storeName);
         if (flag) {
             orgImgStorePath = Const.DOWNLOAD_IMG_BASE_PATH + storeName;
-
         } else {
             return;
         }
